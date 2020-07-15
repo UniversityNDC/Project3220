@@ -1,0 +1,62 @@
+
+import java.util.Scanner;
+
+public class TesterCSV{
+
+	public static void main(String[] args) {
+		
+		OpenDataCSVReader reader1 = new CSVReader("C:\\Users\\dips9\\Desktop\\RoadMaintenance_YTD.csv");
+	      
+	   
+	      System.out.println("Total number of road Maintenance service request YTD: " + reader1.numberOfRows());
+	      
+	      System.out.println("Check how the request was received: Select 1 for Phone, 2 for Web Intake, 3 for E-Mail");
+	      Scanner in = new Scanner(System.in);
+	      int selection = in.nextInt();
+	      
+	      switch(selection) {
+	      case 1: 
+	    	  int count = 0;
+	    	  for(int i=1; i<reader1.numberOfRows(); i++) {
+		    		String o = "Phone";
+					if(reader1.field(i, 3).equals(o)) {
+		    			count++;
+		    		}
+		    	}
+	    	  System.out.println("Total Phone requests: " + count);
+	    	  break;
+	      case 2:
+	    	  int count1 = 0;
+	    	  for(int i=1; i<reader1.numberOfRows(); i++) {
+		    		String o = "Web Intake";
+					if(reader1.field(i, 3).equals(o)) {
+		    			count1++;
+		    		}
+		    	}
+	    	  System.out.println("Total Web requests: " + count1);
+	    	  break;
+	      case 3:
+	    	  int count2 = 0;
+	    	  for(int i=1; i<reader1.numberOfRows(); i++) {
+		    		String o = "E-Mail";
+					if(reader1.field(i, 3).equals(o)) {
+		    			count2++;
+		    		}
+		    	}
+	    	  System.out.println("Total e-mail requests: " + count2);
+	    	  break;
+	    	  
+	      default:
+	    	System.out.println("Invalid Selection");
+	    	break;
+	    	
+	      
+	      }
+	      
+	      in.close();
+	      
+	      
+
+	}
+
+}

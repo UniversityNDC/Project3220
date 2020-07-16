@@ -6,12 +6,12 @@ public class Tester{
 
 	public static void main(String[] args) {
 		
-		OpenDataCSVReader reader1 = new OpenDataCSVReader("C:\\Users\\keyur\\eclipse-workspace\\Practice\\src\\project\\RoadMaintenance_YTD.csv");
+		OpenDataCSVReader reader1 = new OpenDataCSVReader("RoadMaintenance_YTD.csv");
 	      
 	   
 	      System.out.println("Total number of road Maintenance service request YTD: " + reader1.numberOfRows());
 	      
-	      System.out.println("Check how the request was received: Select 1 for Phone, 2 for Web Intake, 3 for E-Mail 4 for location-wise  ,5 for show all data");
+	      System.out.println("Check how the request was received: Select 1 for Phone, 2 for Web Intake, 3 for E-Mail, 4 for location-wise, 5 for show all data");
 	      Scanner in = new Scanner(System.in);
 	      int selection = in.nextInt();
 	      
@@ -46,11 +46,7 @@ public class Tester{
 		    	}
 	    	  System.out.println("Total e-mail requests: " + count2);
 	    	  break;
-	    	  
-	      default:
-	    	System.out.println("Invalid Selection");
-	    	break;
-	    	  
+	    	 
 	      case 4: 
 	    	  
 	    	  Scanner scan = new Scanner (System.in);
@@ -70,9 +66,9 @@ public class Tester{
 	    	  reader1.printrow();
 	    	  break;
 	    	  
-	   /*   default:
+	   default:
 	    	System.out.println("Invalid Selection");
-	    	break;*/
+	    	break;
 	      
 	      }
 	      

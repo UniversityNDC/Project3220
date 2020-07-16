@@ -39,5 +39,15 @@ public class OpenDataCSVReader {
     public String field(int row, int column) {
         return list.get(row).get(column);
     }
+
+public void printrow() {
+		
+		for (int i = 0 ; i< list.size() ;i++) {
+			
+			System.out.println(list.get(i));
+		}
+		
+	}
+		
     
 }

@@ -8,7 +8,7 @@ public class OpenDataCSVReader {
 	
 	private ArrayList<ArrayList<String>> list;
 	
-    public CSVReader(String fileName) {
+    public OpenDataCSVReader(String fileName) {
     	list = new ArrayList<>();
         File file = new File(fileName);
         try {

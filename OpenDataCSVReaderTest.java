@@ -48,8 +48,8 @@ class OpenDataCSVReaderTest {
 	/**
 	 * Test method for {@link OpenDataCSVReader#numberOfRows()}.
 	 */
-	OpenDataCSVReader test1 = new OpenDataCSVReader("C:\\Users\\dips9\\Desktop\\RoadMaintenance_YTD.csv");
-	OpenDataCSVReader test2 = new OpenDataCSVReader("C:\\Users\\dips9\\Desktop\\Community_Centres.csv");
+	OpenDataCSVReader test1 = new OpenDataCSVReader("RoadMaintenance_YTD.csv");
+	OpenDataCSVReader test2 = new OpenDataCSVReader("Community_Centres.csv");
 	@Test
 	void testNumberOfRows() {
 		int a = test1.numberOfRows();

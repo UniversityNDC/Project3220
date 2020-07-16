@@ -11,7 +11,7 @@ public class Tester{
 	   
 	      System.out.println("Total number of road Maintenance service request YTD: " + reader1.numberOfRows());
 	      
-	      System.out.println("Check how the request was received: Select 1 for Phone, 2 for Web Intake, 3 for E-Mail");
+	      System.out.println("Check how the request was received: Select 1 for Phone, 2 for Web Intake, 3 for E-Mail 4 for location-wise  ,5 for show all data");
 	      Scanner in = new Scanner(System.in);
 	      int selection = in.nextInt();
 	      

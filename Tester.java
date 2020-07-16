@@ -49,14 +49,36 @@ public class Tester{
 	      default:
 	    	System.out.println("Invalid Selection");
 	    	break;
-	    	
+	    	  
+	      case 4: 
+	    	  
+	    	  Scanner scan = new Scanner (System.in);
+	    	  System.out.println("Please enter street name for search rocord: ");
+    		  String streetname = scan.next();
+	    	  int count3 = 0;
+	    	  int i;
+	    	  for (i = 0 ;i< reader1.numberOfRows(); i++) {
+	    		  
+	    		  if (reader1.field(i ,6).equals(streetname)) {
+	    			  count3++;
+	    		  	}
+	    		  }
+	    	  	  System.out.println("Total number of request for entered street is : " +count3);
+	    		   
+	      case 5: 
+	    	  reader1.printrow();
+	    	  break;
+	    	  
+	      default:
+	    	System.out.println("Invalid Selection");
+	    	break;
 	      
 	      }
 	      
 	      in.close();
-	      
-	      
 
-	}
+	
+}
+	
 
 }

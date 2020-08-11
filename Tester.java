@@ -1,17 +1,20 @@
-package project;
 
 import java.util.Scanner;
+
+import javax.swing.JFrame;
+
 
 public class Tester{
 
 	public static void main(String[] args) {
 		
-		OpenDataCSVReader reader1 = new OpenDataCSVReader("RoadMaintenance_YTD.csv");
+		
+		   OpenDataCSVReader reader1 = new OpenDataCSVReader("/Users/nehasarvil/eclipse-workspace/Project3220/src/RoadMaintenance_YTD.csv");
 	      
 	   
 	      System.out.println("Total number of road Maintenance service request YTD: " + reader1.numberOfRows());
 	      
-	      System.out.println("Check how the request was received: Select 1 for Phone, 2 for Web Intake, 3 for E-Mail, 4 for location-wise, 5 for show all data");
+	      System.out.println("Check how the request was received:\n 1 for Phone\n 2 for Web Intake\n 3 for E-Mail\n 4 for location-wise\n 5 for Graphical View\n 6 for show all data\n");
 	      Scanner in = new Scanner(System.in);
 	      int selection = in.nextInt();
 	      
@@ -61,17 +64,25 @@ public class Tester{
 	    		  	}
 	    		  }
 	    	  	  System.out.println("Total number of request for entered street is : " +count3);
-	    		   
+	    	  	  break;
+	    		
 	      case 5: 
+	    	  	GraphicView frame = new GraphicView();
+		  		frame.setSize(300, 300);
+		  		frame.setLocationRelativeTo(null); // Center the frame
+		  		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		  		frame.setVisible(true);
+	    	  break;
+	    	  
+	      case 6: 
 	    	  reader1.printrow();
 	    	  break;
 	    	  
-	   default:
+	      default:
 	    	System.out.println("Invalid Selection");
 	    	break;
 	      
-	      }
-	      
+	      }  
 	      in.close();
 
 	

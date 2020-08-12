@@ -21,7 +21,7 @@ class Result extends JPanel {
 		String phone = new String("Phone-> 30%");
 	
 	
-		// Creates section for "Projects".
+		// Creates section for "Web-Intake".
 		g.setColor(Color.YELLOW);
 		g.fillArc(x, y, 2 * radius, 2 * radius, 0, 80);
 		g.setColor(Color.BLACK);

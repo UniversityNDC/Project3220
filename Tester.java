@@ -9,7 +9,7 @@ public class Tester{
 	public static void main(String[] args) {
 		
 		
-		   OpenDataCSVReader reader1 = new OpenDataCSVReader("/Users/nehasarvil/eclipse-workspace/Project3220/src/RoadMaintenance_YTD.csv");
+		   OpenDataCSVReader reader1 = new OpenDataCSVReader("RoadMaintenance_YTD.csv"); /*add path of your data file*/
 	      
 	   
 	      System.out.println("Total number of road Maintenance service request YTD: " + reader1.numberOfRows());
